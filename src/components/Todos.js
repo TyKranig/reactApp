@@ -6,14 +6,16 @@ class Todos extends React.Component {
 
     render() {
         return this.props.todos.map((todo) => (
-            <TodoItem key={todo.id} todo={todo} markComplete={this.props.markComplete}/>
+            <TodoItem key={todo.id} todo={todo} markComplete={this.props.markComplete} delTodo={this.props.delTodo} />
         ));
     }
 }
 
 // Proptypes requiring for this class to be passed in
 Todos.propTypes = {
-    todos: propTypes.array.isRequired
+    todos: propTypes.array.isRequired,
+    markComplete: propTypes.func.isRequired,
+    delTodo: propTypes.func.isRequired
 }
 
 export default Todos;
