@@ -22,7 +22,7 @@ class App extends Component {
         </header>
       </div>
     );
-  }
+  }//test
 }
 
 export default App;
