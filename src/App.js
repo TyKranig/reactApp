@@ -13,6 +13,7 @@ class App extends React.Component {
     todos: []
   }
 
+  // Calls to a "Database"
   componentDidMount() {
     axios.get('https://jsonPlaceholder.typicode.com/todos?_limit=10').then(res => this.setState({ todos: res.data }))
   }
@@ -44,6 +45,7 @@ class App extends React.Component {
     
   }
 
+  // Main Render method needed in all react components, App.js is the main one we display here
   render() {
     return (
       <Router>
